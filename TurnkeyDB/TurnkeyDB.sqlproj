@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>TurnkeyDB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{fa0aad30-948e-4041-b3c0-244b834983af}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>TurnkeyDB</RootNamespace>
+    <AssemblyName>TurnkeyDB</AssemblyName>
+    <ModelCollation>1028,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Chinese_Taiwan_Stroke_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\BackTables" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\A0301.sql" />
+    <Build Include="dbo\Tables\E0402.sql" />
+    <Build Include="dbo\Tables\B0101.sql" />
+    <Build Include="dbo\Tables\B0101-detail.sql" />
+    <Build Include="dbo\Tables\B0201.sql" />
+    <Build Include="dbo\Tables\E0402-detail.sql" />
+    <Build Include="dbo\Tables\A0201.sql" />
+    <Build Include="dbo\Tables\A0101-detail.sql" />
+    <Build Include="dbo\Tables\A0102.sql" />
+    <Build Include="dbo\Tables\B0102.sql" />
+    <Build Include="dbo\Tables\B0401.sql" />
+    <Build Include="dbo\Tables\B0401-detail.sql" />
+    <Build Include="dbo\Tables\B0501.sql" />
+    <Build Include="dbo\Tables\FROM_CONFIG.sql" />
+    <Build Include="dbo\Tables\TURNKEY_TRANSPORT_CONFIG.sql" />
+    <Build Include="dbo\Tables\TURNKEY_USER_PROFILE.sql" />
+    <Build Include="dbo\Tables\A0302.sql" />
+    <Build Include="dbo\Tables\SCHEDULE_CONFIG.sql" />
+    <Build Include="dbo\Tables\SIGN_CONFIG.sql" />
+    <Build Include="dbo\Tables\TASK_CONFIG.sql" />
+    <Build Include="dbo\Tables\TO_CONFIG.sql" />
+    <Build Include="dbo\Tables\TURNKEY_MESSAGE_LOG.sql" />
+    <Build Include="dbo\Tables\A0202.sql" />
+    <Build Include="dbo\Tables\TURNKEY_MESSAGE_LOG_DETAIL.sql" />
+    <Build Include="dbo\Tables\TURNKEY_SEQUENCE.sql" />
+    <Build Include="dbo\Tables\TURNKEY_SYSEVENT_LOG.sql" />
+    <Build Include="dbo\Tables\A0101.sql" />
+    <Build Include="dbo\Tables\A0401.sql" />
+    <Build Include="dbo\Tables\B0202.sql" />
+    <Build Include="dbo\Tables\A0401-detail.sql" />
+    <Build Include="dbo\Tables\A0501.sql" />
+    <Build Include="dbo\BackTables\BackA0101.sql" />
+    <Build Include="dbo\BackTables\BackA0102.sql" />
+    <Build Include="dbo\BackTables\BackA0101-detail.sql" />
+    <Build Include="dbo\BackTables\BackA0201.sql" />
+    <Build Include="dbo\BackTables\BackA0202.sql" />
+    <Build Include="dbo\BackTables\BackA0301.sql" />
+    <Build Include="dbo\BackTables\BackA0302.sql" />
+    <Build Include="dbo\BackTables\BackA0401.sql" />
+    <Build Include="dbo\BackTables\BackA0401-detail.sql" />
+    <Build Include="dbo\BackTables\BackA0501.sql" />
+    <Build Include="dbo\BackTables\BackB0101.sql" />
+    <Build Include="dbo\BackTables\BackB0101-detail.sql" />
+    <Build Include="dbo\BackTables\BackB0102.sql" />
+    <Build Include="dbo\BackTables\BackB0201.sql" />
+    <Build Include="dbo\BackTables\BackB0202.sql" />
+    <Build Include="dbo\BackTables\BackB0401.sql" />
+    <Build Include="dbo\BackTables\BackB0401-detail.sql" />
+    <Build Include="dbo\BackTables\BackB0501.sql" />
+    <Build Include="dbo\BackTables\BackE0402.sql" />
+    <Build Include="dbo\BackTables\BackE0402-detail.sql" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1DB8EB61-00B6-4054-96D2-B3D6A15FD47D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TurnkeySystemV2</RootNamespace>
+    <AssemblyName>TurnkeySystemV2</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>VS.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.78\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.2.10.0\lib\net46\Serilog.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.Console, Version=3.1.1.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.Sinks.Console.3.1.1\lib\net45\Serilog.Sinks.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.File, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.Sinks.File.4.1.0\lib\net45\Serilog.Sinks.File.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\RemoveReportPathSetting.cs" />
+    <Compile Include="Configuration\SqlDBSetting.cs" />
+    <Compile Include="Controller\InitialMethod.cs" />
+    <Compile Include="Controller\SQLMethod.cs" />
+    <Compile Include="Controller\XMLMethod.cs" />
+    <Compile Include="EF_Module\A0101_deltail.cs" />
+    <Compile Include="EF_Module\A0101.cs" />
+    <Compile Include="EF_Module\A0102.cs" />
+    <Compile Include="EF_Module\A0201.cs" />
+    <Compile Include="EF_Module\A0202.cs" />
+    <Compile Include="EF_Module\A0301.cs" />
+    <Compile Include="EF_Module\A0302.cs" />
+    <Compile Include="EF_Module\A0401.cs" />
+    <Compile Include="EF_Module\A0401_detail.cs" />
+    <Compile Include="EF_Module\A0501.cs" />
+    <Compile Include="EF_Module\B0101_detail.cs" />
+    <Compile Include="EF_Module\B0101.cs" />
+    <Compile Include="EF_Module\B0102.cs" />
+    <Compile Include="EF_Module\B0201.cs" />
+    <Compile Include="EF_Module\B0202.cs" />
+    <Compile Include="EF_Module\B0401.cs" />
+    <Compile Include="EF_Module\B0401_detail.cs" />
+    <Compile Include="EF_Module\B0501.cs" />
+    <Compile Include="EF_Module\E0402_detail.cs" />
+    <Compile Include="EF_Module\E0402.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Protocols\A0101\A0101Data.cs" />
+    <Compile Include="Protocols\A0101\A0101Protocol.cs" />
+    <Compile Include="Protocols\A0102\A0102Data.cs" />
+    <Compile Include="Protocols\A0102\A0102Protocol.cs" />
+    <Compile Include="Protocols\A0201\A0201Data.cs" />
+    <Compile Include="Protocols\A0201\A0201Protocol.cs" />
+    <Compile Include="Protocols\A0202\A0202Data.cs" />
+    <Compile Include="Protocols\A0202\A0202Protocol.cs" />
+    <Compile Include="Protocols\A0301\A0301Data.cs" />
+    <Compile Include="Protocols\A0301\A0301Protocol.cs" />
+    <Compile Include="Protocols\A0302\A0302Data.cs" />
+    <Compile Include="Protocols\A0302\A0302Protocol.cs" />
+    <Compile Include="Protocols\A0401\A0401Data.cs" />
+    <Compile Include="Protocols\A0401\A0401Protocol.cs" />
+    <Compile Include="Protocols\A0501\A0501Data.cs" />
+    <Compile Include="Protocols\A0501\A0501Protocol.cs" />
+    <Compile Include="Protocols\AbsProtocol.cs" />
+    <Compile Include="Protocols\B0101\B0101Data.cs" />
+    <Compile Include="Protocols\B0101\B0101Protocol.cs" />
+    <Compile Include="Protocols\B0102\B0102Data.cs" />
+    <Compile Include="Protocols\B0102\B0102Protocol.cs" />
+    <Compile Include="Protocols\B0201\B0201Data.cs" />
+    <Compile Include="Protocols\B0201\B0201Protocol.cs" />
+    <Compile Include="Protocols\B0202\B0202Data.cs" />
+    <Compile Include="Protocols\B0202\B0202Protocol.cs" />
+    <Compile Include="Protocols\B0401\B0401Data.cs" />
+    <Compile Include="Protocols\B0401\B0401Protocol.cs" />
+    <Compile Include="Protocols\B0501\B0501Data.cs" />
+    <Compile Include="Protocols\B0501\B0501Protocol.cs" />
+    <Compile Include="Protocols\E0402\E0402Data.cs" />
+    <Compile Include="Protocols\E0402\E0402Protocol.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="VS.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
