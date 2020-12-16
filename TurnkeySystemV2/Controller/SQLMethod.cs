@@ -64,7 +64,7 @@ namespace TurnkeySystemV2.Controller
                                  "BuyerName,InvoiceType,DonateMark,SalesAmount,TaxType,TaxRate,TaxAmount,TotalAmount)" +
                                  "VALUES(@InvoiceNumber,@InvoiceDate,@InvoiceTime,@SellerID,@SellerName,@BuyerID," +
                                  "@BuyerName,@InvoiceType,@DonateMark,@SalesAmount,@TaxType,@TaxRate,@TaxAmount,@TotalAmount)";
-                                conn.Execute(sql, item);
+                               // conn.Execute(sql, item);
                                 try
                                 {
                                     sql = $"DELETE FROM A0101 WHERE InvoiceNumber = '{item.InvoiceNumber}'";
@@ -106,7 +106,7 @@ namespace TurnkeySystemV2.Controller
                         {
                             sql = "INSERT INTO [BACKA0101-detail](InvoiceNumber,Description,Quantity,Unit,UnitPrice,Amount,SequenceNumber)" +
                                 "VALUES(@InvoiceNumber,@Description,@Quantity,@Unit,@UnitPrice,@Amount,@SequenceNumber)";
-                            conn.Execute(sql, item);
+                           // conn.Execute(sql, item);
                             try
                             {
                                 sql = $"DELETE FROM [A0101-detail] WHERE InvoiceNumber = '{item.InvoiceNumber}' AND SequenceNumber = {item.SequenceNumber}";
@@ -146,7 +146,7 @@ namespace TurnkeySystemV2.Controller
                         {
                             sql = "INSERT INTO BACKA0102(InvoiceNumber,InvoiceDate,BuyerID,SellerID,ReceiveDate,ReceiveTime)" +
                                 "VALUES(@InvoiceNumber,@InvoiceDate,@BuyerID,@SellerID,@ReceiveDate,@ReceiveTime)";
-                            conn.Execute(sql, item);
+                           // conn.Execute(sql, item);
                             try
                             {
                                 sql = $"DELETE FROM A0102 WHERE InvoiceNumber = '{item.InvoiceNumber}'";
@@ -182,7 +182,7 @@ namespace TurnkeySystemV2.Controller
                         {
                             sql = "INSERT INTO BACKA0201(CancelInvoiceNumber,InvoiceDate,Buyerid,Sellerid,CancelDate,CancelTime,CancelReason)" +
                                 "VALUES(@CancelInvoiceNumber,@InvoiceDate,@Buyerid,@Sellerid,@CancelDate,@CancelTime,@CancelReason)";
-                            conn.Execute(sql, item);
+                           // conn.Execute(sql, item);
                             try
                             {
                                 sql = $"DELETE FROM A0201 WHERE CancelInvoiceNumber ='{item.CancelInvoiceNumber}'";
@@ -218,7 +218,7 @@ namespace TurnkeySystemV2.Controller
                         {
                             sql = "INSERT INTO BACKA0202(CancelInvoiceNumber,InvoiceDate,Buyerid,Sellerid,CancelDate,CancelTime)" +
                                 "VALUES(@CancelInvoiceNumber,@InvoiceDate,@Buyerid,@Sellerid,@CancelDate,@CancelTime)";
-                            conn.Execute(sql, item);
+                           // conn.Execute(sql, item);
                             try
                             {
                                 sql = $"DELETE FROM A0202 WHERE CancelInvoiceNumber = '{item.CancelInvoiceNumber}'";
@@ -254,7 +254,7 @@ namespace TurnkeySystemV2.Controller
                         {
                             sql = "INSERT INTO BACKA0301(RejectInvoiceNumber,InvoiceDate,BuyerId,SellerId,RejectDate,RejectTime,RejectReason)" +
                                 "VALUES(@RejectInvoiceNumber,@InvoiceDate,@BuyerId,@SellerId,@RejectDate,@RejectTime,@RejectReason)";
-                            conn.Execute(sql, item);
+                           // conn.Execute(sql, item);
                             try
                             {
                                 sql = $"DELETE FROM A0301 WHERE RejectInvoiceNumber = '{item.RejectInvoiceNumber}'";
@@ -290,7 +290,7 @@ namespace TurnkeySystemV2.Controller
                         {
                             sql = "INSERT INTO BACKA0302(RejectInvoiceNumber,InvoiceDate,BuyerId,SellerId,RejectDate,RejectTime)" +
                                 "VALUES(@RejectInvoiceNumber,@InvoiceDate,@BuyerId,@SellerId,@RejectDate,@RejectTime)";
-                            conn.Execute(sql, item);
+                           // conn.Execute(sql, item);
                             try
                             {
                                 sql = $"DELETE FROM A0302 WHERE RejectInvoiceNumber = '{item.RejectInvoiceNumber}'";
@@ -330,7 +330,7 @@ namespace TurnkeySystemV2.Controller
                                  "BuyerName,InvoiceType,DonateMark,SalesAmount,TaxType,TaxRate,TaxAmount,TotalAmount)" +
                                  "VALUES(@InvoiceNumber,@InvoiceDate,@InvoiceTime,@SellerID,@SellerName,@BuyerID," +
                                  "@BuyerName,@InvoiceType,@DonateMark,@SalesAmount,@TaxType,@TaxRate,@TaxAmount,@TotalAmount)";
-                                conn.Execute(sql, item);
+                               // conn.Execute(sql, item);
                                 try
                                 {
                                     sql = $"DELETE FROM A0401 WHERE InvoiceNumber = '{item.InvoiceNumber}'";
@@ -372,7 +372,7 @@ namespace TurnkeySystemV2.Controller
                         {
                             sql = "INSERT INTO [BACKA0401-detail](InvoiceNumber,Description,Quantity,Unit,UnitPrice,Amount,SequenceNumber)" +
                                 "VALUES(@InvoiceNumber,@Description,@Quantity,@Unit,@UnitPrice,@Amount,@SequenceNumber)";
-                            conn.Execute(sql, item);
+                           // conn.Execute(sql, item);
                             try
                             {
                                 sql = $"DELETE FROM [A0401-detail] WHERE InvoiceNumber = '{item.InvoiceNumber}' AND SequenceNumber = {item.SequenceNumber}";
@@ -412,7 +412,7 @@ namespace TurnkeySystemV2.Controller
                         {
                             sql = "INSERT INTO BACKA0501(CancelInvoiceNumber,InvoiceDate,Buyerid,Sellerid,CancelDate,CancelTime,CancelReason)" +
                                 "VALUES(@CancelInvoiceNumber,@InvoiceDate,@Buyerid,@Sellerid,@CancelDate,@CancelTime,@CancelReason)";
-                            conn.Execute(sql, item);
+                           // conn.Execute(sql, item);
                             try
                             {
                                 sql = $"DELETE FROM A0501 WHERE CancelInvoiceNumber = '{item.CancelInvoiceNumber}'";
@@ -448,7 +448,7 @@ namespace TurnkeySystemV2.Controller
                         {
                             sql = "INSERT INTO BACKB0101(AllowanceNumber,AllowanceDate,SellerID,SellerName,BuyerID,BuyerName,AllowanceType,taxamount,Totalamount)" +
                                    "VALUES(@AllowanceNumber,@AllowanceDate,@SellerID,@SellerName,@BuyerID,@BuyerName,@AllowanceType,@taxamount,@Totalamount)";
-                            conn.Execute(sql, item);
+                           // conn.Execute(sql, item);
                             try
                             {
                                 sql = $"DELETE FROM B0101 WHERE AllowanceNumber = '{item.AllowanceNumber}'";
@@ -483,7 +483,7 @@ namespace TurnkeySystemV2.Controller
                                 ",OriginalDescription,Quantity,Unit,UnitPrice,Amount,Tax,AllowanceSequenceNumber,TaxType)" +
                                 "VALUES(@AllowanceNumber,@Productitem,@OriginalInvoiceDate,@OriginalInvoiceNumber,@OriginalSequenceNumber,@OriginalDescription" +
                                 ",@Quantity,@Unit,@UnitPrice,@Amount,@Tax,@AllowanceSequenceNumber,@TaxType)";
-                            conn.Execute(sql, item);
+                           // conn.Execute(sql, item);
                             try
                             {
                                 sql = $"DELETE FROM [B0101-detail] WHERE AllowanceNumber = '{item.AllowanceNumber}'";
@@ -523,7 +523,7 @@ namespace TurnkeySystemV2.Controller
                         {
                             sql = "INSERT INTO BACKB0102(AllowanceNumber,AllowanceDate,BuyerID,SellerID,ReceiveDate,ReceiveTime,AllowanceType)" +
                                 "VALUES(@AllowanceNumber,@AllowanceDate,@BuyerID,@SellerID,@ReceiveDate,@ReceiveTime,@AllowanceType)";
-                            conn.Execute(sql, item);
+                           // conn.Execute(sql, item);
                             try
                             {
                                 sql = $"DELETE FROM B0102 WHERE AllowanceNumber = '{item.AllowanceNumber}'";
@@ -559,7 +559,7 @@ namespace TurnkeySystemV2.Controller
                         {
                             sql = "INSERT INTO BACKB0201(CancelAllowanceNumber,AllowanceDate,BuyerId,SellerId,CancelDate,CancelTime,CancelReason)" +
                                 "VALUES(@CancelAllowanceNumber,@AllowanceDate,@BuyerId,@SellerId,@CancelDate,@CancelTime,@CancelReason)";
-                            conn.Execute(sql, item);
+                           // conn.Execute(sql, item);
                             try
                             {
                                 sql = $"DELETE FROM B0201 WHERE CancelAllowanceNumber = '{item.CancelAllowanceNumber}'";
@@ -595,7 +595,7 @@ namespace TurnkeySystemV2.Controller
                         {
                             sql = "INSERT INTO BACKB0202(CancelAllowanceNumber,AllowanceDate,BuyerId,SellerId,CancelDate,CancelTime)" +
                                 "VALUES(@CancelAllowanceNumber,@AllowanceDate,@BuyerId,@SellerId,@CancelDate,@CancelTime)";
-                            conn.Execute(sql, item);
+                           // conn.Execute(sql, item);
                             try
                             {
                                 sql = $"DELETE FROM B0202 WHERE CancelAllowanceNumber ='{item.CancelAllowanceNumber}'";
@@ -631,7 +631,7 @@ namespace TurnkeySystemV2.Controller
                         {
                             sql = "INSERT INTO BACKB0401(AllowanceNumber,AllowanceDate,SellerID,SellerName,BuyerID,BuyerName,AllowanceType)" +
                                    "VALUES(@AllowanceNumber,@AllowanceDate,@SellerID,@SellerName,@BuyerID,@BuyerName,@AllowanceType)";
-                            conn.Execute(sql, item);
+                           // conn.Execute(sql, item);
                             try
                             {
                                 sql = $"DELETE FROM B0401 WHERE AllowanceNumber = '{item.AllowanceNumber}'";
@@ -666,7 +666,7 @@ namespace TurnkeySystemV2.Controller
                                 ",OriginalDescription,Quantity,Unit,UnitPrice,Amount,Tax,AllowanceSequenceNumber,TaxType,Taxamount,Totalamount)" +
                                 "VALUES(@AllowanceNumber,@Productitem,@OriginalInvoiceDate,@OriginalInvoiceNumber,@OriginalSequenceNumber,@OriginalDescription" +
                                 ",@Quantity,@Unit,@UnitPrice,@Amount,@Tax,@AllowanceSequenceNumber,@TaxType,@Taxamount,@Totalamount)";
-                            conn.Execute(sql, item);
+                           // conn.Execute(sql, item);
                             try
                             {
                                 sql = $"DELETE FROM [B0401-detail] WHERE AllowanceNumber = '{item.AllowanceNumber}' AND Productitem = {item.Productitem}";
@@ -706,7 +706,7 @@ namespace TurnkeySystemV2.Controller
                         {
                             sql = "INSERT INTO BACKB0501(CancelAllowanceNumber,AllowanceDate,BuyerId,SellerId,CancelDate,CancelTime,Cancelreason)" +
                                 "VALUES(@CancelAllowanceNumber,@AllowanceDate,@BuyerId,@SellerId,@CancelDate,@CancelTime,@Cancelreason)";
-                            conn.Execute(sql, item);
+                           // conn.Execute(sql, item);
                             try
                             {
                                 sql = $"DELETE FROM B0501 WHERE CancelAllowanceNumber = '{item.CancelAllowanceNumber}'";
@@ -742,7 +742,7 @@ namespace TurnkeySystemV2.Controller
                         {
                             sql = "INSERT INTO BACKE0401(Headban,Branchban,Invoicetype,Yearmonth,Invoicetrack)" +
                                    "VALUES(@Headban,@Branchban,@Invoicetype,@Yearmonth,@Invoicetrack)";
-                            conn.Execute(sql, item);
+                           // conn.Execute(sql, item);
                             try
                             {
                                 sql = $"DELETE FROM E0401 WHERE Headban = '{item.Headban}'";
@@ -775,7 +775,7 @@ namespace TurnkeySystemV2.Controller
                         {
                             sql = "INSERT INTO [BACKE0402-detail](Branchtrackitem,Invoicebeginno,Invoiceendno)" +
                                 "VALUES(@Branchtrackitem,@Invoicebeginno,@Invoiceendno)";
-                            conn.Execute(sql, item);
+                           // conn.Execute(sql, item);
                             try
                             {
                                 sql = $"DELETE FROM [E0402-detail] WHERE Branchtrackitem = {item.Branchtrackitem}";

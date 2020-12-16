@@ -187,7 +187,7 @@ namespace TurnkeySystemV2.Controller
             //StringWriter sww = new StringWriter();//字串物件
             foreach (var item in values)
             {
-                txtWriter = new StreamWriter(@"" + $"{RemoveReportPathSetting.A0201Path}\\{item.CancelInvoiceNumber}.xml", false);
+                txtWriter = new StreamWriter(@"" + $"{RemoveReportPathSetting.A0501Path}\\{item.CancelInvoiceNumber}.xml", false);
                 //xs.Serialize(sww, item, ns);
                 xs.Serialize(txtWriter, item, ns);
             }
