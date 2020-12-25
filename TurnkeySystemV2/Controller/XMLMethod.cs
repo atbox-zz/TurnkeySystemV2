@@ -320,7 +320,7 @@ namespace TurnkeySystemV2.Controller
             {
                 //StringWriter sww = new StringWriter();//字串物件
                 //xs.Serialize(sww, item, ns);
-                txtWriter = new StreamWriter(@"" + $"{RemoveReportPathSetting.B0501Path}\\{item.CancelInvoiceNumber}.xml", false);
+                txtWriter = new StreamWriter(@"" + $"{RemoveReportPathSetting.B0501Path}\\{item.CancelAllowanceNumber}.xml", false);
                 xs.Serialize(txtWriter, item, ns);
             }
             txtWriter.Close();

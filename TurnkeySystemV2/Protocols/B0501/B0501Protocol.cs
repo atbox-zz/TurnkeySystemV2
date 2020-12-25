@@ -14,8 +14,8 @@ namespace TurnkeySystemV2.Protocols.B0501
                 foreach (var B0501Data in Value)
                 {
                     CancelInvoice data = new CancelInvoice();
-                    data.CancelInvoiceNumber = B0501Data.CancelAllowanceNumber.Trim();
-                    data.InvoiceDate = B0501Data.AllowanceDate.Trim();
+                    data.CancelAllowanceNumber = B0501Data.CancelAllowanceNumber.Trim();
+                    data.AllowanceDate = B0501Data.AllowanceDate.Trim();
                     data.BuyerId = B0501Data.BuyerId.Trim();
                     data.SellerId = B0501Data.SellerId.Trim();
                     data.CancelDate = B0501Data.CancelDate.Trim();

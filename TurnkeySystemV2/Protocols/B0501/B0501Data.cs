@@ -20,11 +20,11 @@ namespace TurnkeySystemV2.Protocols.B0501
         /// <summary>
         /// 作廢發票號碼
         /// </summary>
-        public string CancelInvoiceNumber { get; set; }
+        public string CancelAllowanceNumber { get; set; }
         /// <summary>
         /// 發票日期
         /// </summary>
-        public string InvoiceDate { get; set; }
+        public string AllowanceDate { get; set; }
         /// <summary>
         /// 買方統一編號
         /// </summary>
