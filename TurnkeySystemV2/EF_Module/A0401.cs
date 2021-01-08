@@ -18,5 +18,8 @@ namespace TurnkeySystemV2.EF_Module
         public Nullable<decimal> TaxRate { get; set; }
         public Nullable<decimal> TaxAmount { get; set; }
         public Nullable<decimal> TotalAmount { get; set; }
+        public string SellerAddress { get; set; }
+        public string SellerPersonInCharge { get; set; }
+        public string SellerTelephoneNumber { get; set; }
     }
 }

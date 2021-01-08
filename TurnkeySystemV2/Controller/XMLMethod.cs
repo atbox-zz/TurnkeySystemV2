@@ -311,11 +311,11 @@ namespace TurnkeySystemV2.Controller
         /// 平台存證作廢發票
         /// </summary>
         /// <param name="values"></param>
-        public void Save_B0501(List<Protocols.B0501.CancelInvoice> values)
+        public void Save_B0501(List<Protocols.B0501.CancelAllowance> values)
         {
             XmlSerializerNamespaces ns = new XmlSerializerNamespaces();//宣告空間區域
             ns.Add("xsi", "http://www.w3.org/2001/XMLSchema-instance");
-            XmlSerializer xs = new XmlSerializer(typeof(Protocols.B0501.CancelInvoice), "urn:GEINV:eInvoiceMessage:B0501:3.1");//宣告XML框架
+            XmlSerializer xs = new XmlSerializer(typeof(Protocols.B0501.CancelAllowance), "urn:GEINV:eInvoiceMessage:B0501:3.1");//宣告XML框架
             foreach (var item in values)
             {
                 //StringWriter sww = new StringWriter();//字串物件

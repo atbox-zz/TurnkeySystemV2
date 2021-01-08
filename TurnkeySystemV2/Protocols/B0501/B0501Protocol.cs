@@ -6,14 +6,14 @@ namespace TurnkeySystemV2.Protocols.B0501
     {
         public override void ReadData()
         {
-            List<CancelInvoice> B0501 = new List<CancelInvoice>();
+            List<CancelAllowance> B0501 = new List<CancelAllowance>();
             var Value = SQLMethod.Count_B0501();
             if (Value != null)
             {
                 Form1.B0501Num = Value.Count;
                 foreach (var B0501Data in Value)
                 {
-                    CancelInvoice data = new CancelInvoice();
+                    CancelAllowance data = new CancelAllowance();
                     data.CancelAllowanceNumber = B0501Data.CancelAllowanceNumber.Trim();
                     data.AllowanceDate = B0501Data.AllowanceDate.Trim();
                     data.BuyerId = B0501Data.BuyerId.Trim();
@@ -23,10 +23,10 @@ namespace TurnkeySystemV2.Protocols.B0501
                     data.CancelReason = B0501Data.Cancelreason.Trim();
                     B0501.Add(data);
                 }
-                CancelInvoice = B0501;
+                CancelAllowance = B0501;
                 if (Value.Count > 0)
                 {
-                    XMLMethod.Save_B0501(CancelInvoice);
+                    XMLMethod.Save_B0501(CancelAllowance);
                 }
             }
             else

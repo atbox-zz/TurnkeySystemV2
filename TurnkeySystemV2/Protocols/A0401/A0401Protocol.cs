@@ -23,6 +23,9 @@ namespace TurnkeySystemV2.Protocols.A0401
                         data.Main.InvoiceTime = A0401Data.InvoiceTime.Substring(0, 2) + ":" + A0401Data.InvoiceTime.Substring(2, 2) + ":00";
                         data.Main.Seller.Identifier = A0401Data.SellerID.Trim();
                         data.Main.Seller.Name = A0401Data.SellerName.Trim();
+                        data.Main.Seller.Address = A0401Data.SellerAddress.Trim();
+                        data.Main.Seller.PersonInCharge = A0401Data.SellerPersonInCharge.Trim();
+                        data.Main.Seller.TelephoneNumber = A0401Data.SellerTelephoneNumber.Trim();
                         data.Main.Buyer.Identifier = A0401Data.BuyerID.Trim();
                         data.Main.Buyer.Name = A0401Data.BuyerName.Trim();
                         data.Main.InvoiceType = A0401Data.InvoiceType.Trim();

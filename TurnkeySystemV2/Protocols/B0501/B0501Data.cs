@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Xml.Serialization;
+using TurnkeySystemV2.Protocols.A0201;
 
 namespace TurnkeySystemV2.Protocols.B0501
 {
@@ -11,9 +12,9 @@ namespace TurnkeySystemV2.Protocols.B0501
         /// <summary>
         /// 平台存證作廢發票
         /// </summary>
-        public List<CancelInvoice> CancelInvoice { get; set; }
+        public List<CancelAllowance> CancelAllowance { get; set; }
     }
-    public class CancelInvoice
+    public class CancelAllowance
     {
         [XmlAttributeAttribute("schemaLocation", Namespace = "http://www.w3.org/2001/XMLSchema-instance")]
         public string schemaLocation { get; set; } = "urn:GEINV:eInvoiceMessage:B0501:3.1 B0501.xsd";

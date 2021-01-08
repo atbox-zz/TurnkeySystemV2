@@ -740,12 +740,12 @@ namespace TurnkeySystemV2.Controller
                     {
                         foreach (var item in values)
                         {
-                            sql = "INSERT INTO BACKE0401(Headban,Branchban,Invoicetype,Yearmonth,Invoicetrack)" +
+                            sql = "INSERT INTO BACKE0402(Headban,Branchban,Invoicetype,Yearmonth,Invoicetrack)" +
                                    "VALUES(@Headban,@Branchban,@Invoicetype,@Yearmonth,@Invoicetrack)";
                            // conn.Execute(sql, item);
                             try
                             {
-                                sql = $"DELETE FROM E0401 WHERE Headban = '{item.Headban}'";
+                                sql = $"DELETE FROM E0402 WHERE Headban = '{item.Headban}'";
                                 conn.Execute(sql);
                             }
                             catch (Exception ex) { Log.Error(ex, "E0402刪除失敗"); }

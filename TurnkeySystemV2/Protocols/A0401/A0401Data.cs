@@ -85,6 +85,18 @@ namespace TurnkeySystemV2.Protocols.A0401
         /// 名稱
         /// </summary>
         public string Name { get; set; }
+        /// <summary>
+        /// 地址
+        /// </summary>
+        public string Address { get; set; }
+        /// <summary>
+        /// 負責人
+        /// </summary>
+        public string PersonInCharge { get; set; }
+        /// <summary>
+        /// 電話
+        /// </summary>
+        public string TelephoneNumber { get; set; }
     }
     /// <summary>
     /// 買方
