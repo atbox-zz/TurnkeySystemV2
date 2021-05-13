@@ -17,7 +17,5 @@ namespace TurnkeySystemV2.EF_Module
         public Nullable<decimal> Tax { get; set; }
         public string AllowanceSequenceNumber { get; set; }
         public string TaxType { get; set; }
-        public string Taxamount { get; set; }
-        public string Totalamount { get; set; }
     }
 }

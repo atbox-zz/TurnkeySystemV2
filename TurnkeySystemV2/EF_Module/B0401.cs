@@ -9,5 +9,7 @@
         public string BuyerID { get; set; }
         public string BuyerName { get; set; }
         public string AllowanceType { get; set; }
+        public string Taxamount { get; set; }
+        public string Totalamount { get; set; }
     }
 }

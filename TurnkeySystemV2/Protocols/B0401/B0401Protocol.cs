@@ -43,8 +43,8 @@ namespace TurnkeySystemV2.Protocols.B0401
                                 data.Details.Add(ProductItem);
                             }
                         }
-                        data.Amount.TaxAmount = Convert.ToDecimal(Item[0].Taxamount);
-                        data.Amount.TotalAmount = Convert.ToDecimal(Item[0].Totalamount);
+                        data.Amount.TaxAmount = Convert.ToDecimal(B0401Data.Taxamount);
+                        data.Amount.TotalAmount = Convert.ToDecimal(B0401Data.Totalamount);
                         B0401.Add(data);
                     }
                     Allowance = B0401;
